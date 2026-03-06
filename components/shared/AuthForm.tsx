@@ -78,7 +78,11 @@ export function AuthForm({ type }: AuthFormProps) {
               <FormItem>
                 <FormLabel>이름</FormLabel>
                 <FormControl>
-                  <Input placeholder="홍길동" {...field} />
+                  <Input
+                    placeholder="홍길동"
+                    autoComplete="name"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -97,6 +101,7 @@ export function AuthForm({ type }: AuthFormProps) {
                 <Input
                   type="email"
                   placeholder="example@email.com"
+                  autoComplete="email"
                   {...field}
                 />
               </FormControl>
@@ -113,7 +118,12 @@ export function AuthForm({ type }: AuthFormProps) {
             <FormItem>
               <FormLabel>비밀번호</FormLabel>
               <FormControl>
-                <Input type="password" placeholder="••••••" {...field} />
+                <Input
+                  type="password"
+                  placeholder="••••••"
+                  autoComplete={type === "sign-in" ? "current-password" : "new-password"}
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -129,7 +139,12 @@ export function AuthForm({ type }: AuthFormProps) {
               <FormItem>
                 <FormLabel>비밀번호 확인</FormLabel>
                 <FormControl>
-                  <Input type="password" placeholder="••••••" {...field} />
+                  <Input
+                    type="password"
+                    placeholder="••••••"
+                    autoComplete="new-password"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
