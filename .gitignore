@@ -25,7 +25,7 @@
 *.pem
 
 # 개발 도구 설정
-.claude/
+.claude/settings.local.json
 .mcp.json
 .playwright-mcp/
 
