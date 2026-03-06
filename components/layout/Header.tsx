@@ -16,6 +16,7 @@ import { Container } from "./Container";
 const navigationItems = [
   { href: "/", label: "홈" },
   { href: "/dashboard", label: "대시보드" },
+  { href: "/examples", label: "예제" },
   { href: "/sign-in", label: "로그인" },
 ];
 
